@@ -1,8 +1,8 @@
 /**
  * [ProgressBarDrag 进度条拖拽]
- * @param {[type]} bar  [description]
- * @param {[type]} line [description]
- * @param {[type]} btn  [description]
+ * @param {[type]} bar  [需要改变长度的进度条]
+ * @param {[type]} line [已经有长度的进度条]
+ * @param {[type]} btn  [需要移动的按钮]
  */
 function ProgressBarDrag(bar, line, btn) {
     this.bar = bar || null;
