@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>拖拽验证</title>
+    <style type="text/css">
+    * {
+        padding: 0;
+        margin: 0
+    }
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        background-color: green;
+    }
+
+    .wrapper {
+        position: relative;
+        width: 500px;
+    }
+
+    .progress {
+        position: absolute;
+        height: 10px;
+        border-radius: 20px;
+        left: 10px;
+        top: 20px;
+    }
+
+    .line {
+        width: 100%;
+        background-color: rgba(255, 255, 255, .2);
+    }
+
+    .progressbar {
+        background-color: #fff;
+        width: 10px;
+    }
+
+    .progressbtn {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid rgba(0, 0, 0, .8);
+        position: absolute;
+        left: 0px;
+        top: 13px;
+        background: #eee;
+        cursor: pointer;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="progress line" id="line"></div>
+        <div class="progress progressbar" id="bar"></div>
+        <div class="progressbtn" id="btn"></div>
+    </div>
+    <script type="text/javascript" src="progressBarDrag.js"></script>
+    <script type="text/javascript">
+        var line = document.getElementById("line"),
+            bar = document.getElementById("bar"),
+            btn = document.getElementById("btn"),
+            pbd = new ProgressBarDrag(bar, line, btn);
+        pbd.drag()
+    </script>
+</body>
+</html>
